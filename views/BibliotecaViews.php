@@ -22,7 +22,7 @@ foreach($lista_livros as $livro){
         <h6 class='card-title text-center'>$titulo</h6>
         <img src='$foto' class='card-img-top' alt='...'>
         <span>isbn $isbn</span>
-            <p  j>$idAutor</p>
+            <p>$idAutor</p>
             <h6 class='card-title'>$editora </h6>
                 <p class='card-text'>$idioma </p>
              <span >Numero de Paginas $numeroPaginas</span>

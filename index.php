@@ -16,6 +16,13 @@ switch($controlador){
         require "controllers/BibliotecaController.php";
         $controller = new BibliotecaController();
         break;
+    case "usuario": 
+        require "controllers/UsuarioController.php";
+        $controller = new UsuarioController();
+        break;
+    case "login":
+        require "controllers/LoginController.php";
+        $controller = new LoginController();
 
     default:
         echo "Pagina não encontrada ";
@@ -27,5 +34,6 @@ if($identificador){
 }else {
     $controller->$metodo();
 }
+
 
 
