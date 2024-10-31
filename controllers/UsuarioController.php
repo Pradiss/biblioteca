@@ -2,14 +2,14 @@
 
 require "models/UsuarioModel.php";
 
-class UsuarioController {
+class UsuarioController{
 
     private $url = "http://localhost/uc8/biblioteca";
 
     private $usuarioModel;
 
     public function __construct(){
-        $this->usuarioModel = new Usuario();
+        $this->usuarioModel = new User();
     }
 
     public function index(){

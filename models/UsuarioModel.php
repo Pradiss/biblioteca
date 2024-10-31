@@ -1,8 +1,8 @@
 <?php 
 
-require "models/DataBase.php";
+require "DataBase.php";
 
-class Usuario {
+class User{
 
     private $db; 
 
@@ -12,16 +12,16 @@ class Usuario {
     }
 
     public function getAllUsuario(){
-        $result = $this->db->query("SELECT * FROM usuario");
+        $result = $this->db->query("SELECT *FROM usuario");
 
         return $result->fetchAll(PDO::FETCH_ASSOC);
 
     }
 
-    public function getIdBy($idUsuario){
-        $sql = $this->db->query("SELECT * FROM usuario WHERE idUsuario=?"),
+    public function getById($idUsuario){
+        $sql = $this->db->prepare("SELECT * FROM usuario WHERE idUsuario=?");
         $sql->execute([$idUsuario]);
-        return $result->fetchAll(PDO::FETCH_ASSOC);
+        return $sql->fetch(PDO::FETCH_ASSOC);
     }
 
     public function insert($nome,$idUsuario,$senha,$email){
