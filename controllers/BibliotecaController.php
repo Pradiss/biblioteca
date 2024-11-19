@@ -18,4 +18,29 @@ class BibliotecaController{
         require "views/BibliotecaViews.php";
     }
 
+    public function details($isbn){
+        
+       
+        $livroUnico = $this->bibliotecaModel->getById($isbn);
+
+        
+        
+        $baseUrl = $this->url;
+        require "views/DetalhesForm.php";
+        
+    }
+
+    public function detailsAutor($idAutor){
+        
+       
+        $autorUnico = $this->bibliotecaModel->getByIdAutor($idAutor);
+
+        
+        
+        $baseUrl = $this->url;
+        require "views/DetalhesAutor.php";
+        
+    }
+   
+
 }

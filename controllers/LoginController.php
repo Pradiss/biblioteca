@@ -1,6 +1,6 @@
 <?php 
 
-require "models/LoginModel.php";
+require_once "models/LoginModel.php";
 
 class LoginController{
 
@@ -20,14 +20,14 @@ class LoginController{
         require "views/LoginForm.php";
     }
     public function criar(){
-        $this->loginModel->insert($nome,$idUsuario,$senha);
+       echo "1";
     }
 
     public function autenticar(){
-        $idUsuario = $_POST["idUsuario"];
+        $usuario = $_POST["usuario"];
         $senha = $_POST["senha"];
-        $manter_logado = isset($_POST["manter_logado"]) ? true : false;
-        $this->loginModel->getByUsuario($idUsuario,$senha,$manter_logado);
+        // $manter_logado = isset($_POST["manter_logado"]) ? true : false;
+        $this->loginModel->getByUsuario($usuario,$senha);
 
         if(isset($_SESSION["erro"])){
             unset($_SESSION["erro"]);

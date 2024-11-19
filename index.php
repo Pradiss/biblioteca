@@ -20,6 +20,7 @@ switch($controlador){
         require "controllers/UsuarioController.php";
         $controller = new UsuarioController();
         break;
+    
     case "login":
         require "controllers/LoginController.php";
         $controller = new LoginController();

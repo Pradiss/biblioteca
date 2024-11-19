@@ -3,7 +3,7 @@
 
 class DataBase {
 
-    private static $conexao; 
+    private static $conexao = null; 
 
     public static function getConexao(){
         

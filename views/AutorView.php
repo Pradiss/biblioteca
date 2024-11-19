@@ -7,6 +7,7 @@ foreach($list_autor as $list){
     $nomeAutor = $list["nomeAutor"];
     $sexo = $list["sexo"];
     $foto = $list["foto"];
+    
 
 
 
@@ -16,13 +17,12 @@ foreach($list_autor as $list){
     <div class='col' >
         <div class='card ' style='width: 18rem;'>
             <div class='card-body'>
-            <img src='$foto' class='card-img-top' alt='...'>
+            <img src='$foto' class='card-img-top rounded' alt='...'>
                 <h6 class='card-title'></h6>
                 <h6 class='card-title text-center'>$nomeAutor</h6>
                 <p class='card-text'><strong>Genero:</strong> $sexo </p>
                 <br>
-                <a href='#' class='btn btn-primary '> Details</a>
-                <a href='[[base-url]]/biblioteca-adm' class='btn btn-primary'>Seus Livros</a>
+                <a href='[[base-url]]/biblioteca-adm/detailsAutor/$idAutor' class='btn btn-primary '> Details</a>
             </div>
         </div>
     </div>

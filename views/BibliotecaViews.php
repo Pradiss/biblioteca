@@ -2,6 +2,8 @@
 
 $livros ="";
 
+
+
 foreach($lista_livros as $livro){
     $isbn = $livro["isbn"];
     $titulo = $livro["titulo"];
@@ -14,23 +16,25 @@ foreach($lista_livros as $livro){
 
 
     $livros.= "
-    
+
+   
 <main>
-    <div class='col' >
-        <div class='card ' style='width: 18rem;'>
-        <div class='card-body'>
-        <h6 class='card-title text-center'>$titulo</h6>
-        <img src='$foto' class='card-img-top' alt='...'>
-        <span>isbn $isbn</span>
-            <p>$idAutor</p>
-            <h6 class='card-title'>$editora </h6>
-                <p class='card-text'>$idioma </p>
-             <span >Numero de Paginas $numeroPaginas</span>
-             <br>
-            </div>
-            <a href='#' class='btn btn-primary'>Reserve Now</a>
-         </div>
+  <div class='row '>
+     <div class='col'>
+      <div class='card w-100'>
+      <img src='$foto' class='card-img-top' alt='...'>
+      <div class='card-body'>
+        <h5 class='card-title text-center'>$titulo</h5>
+        <p class='card-text'><b> Editora: </b>$editora</p>
+        <small class='text-body-secondary'><b>Numero de Paginas: </b> $numeroPaginas</small>
+      </div>
+      <div class='card-footer '>
+        <a href='[[base-url]]/biblioteca-adm/details/$isbn' class='btn btn-primary'>Detalhes</a>
+        <a href='[[base-url]]/biblioteca-adm/detailsAutor/$idAutor' class='btn btn-primary'>Autor</a>
+      </div>
     </div>
+  </div>
+</div>
 </main>
     ";
 
