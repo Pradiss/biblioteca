@@ -28,8 +28,7 @@ foreach($form_usuario as $form ){
                     <div class='d-flex flex-column align-items-center text-center'>
                       <img src='$foto'  class='w-100'>
                       <div class='mt-3 text-light'>
-                        <h4>$nome</h4>
-                        <p class='text-secondary mb-1'>$nome</p> 
+                        <h4 class='text-black'>$nome</h4>
                         <p class='text-secondary mb-1'>$usuario</p> 
 
                         <p class='text-secondary mb-1'>$cidade| $uf</p>

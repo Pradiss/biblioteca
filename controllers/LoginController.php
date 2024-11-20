@@ -20,7 +20,7 @@ class LoginController{
         require "views/LoginForm.php";
     }
     public function criar(){
-       echo "1";
+    $this->loginModel->insert($nome,$usuario,$senha,$email);
     }
 
     public function autenticar(){

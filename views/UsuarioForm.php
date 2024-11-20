@@ -5,8 +5,7 @@ $footer = file_get_contents("views/template/html/footer.html");
 $header = str_replace("[[base-url]]",$baseUrl , $header);
 
 echo $header;
-$nome = "";
-$email = "";
+
 
 ?>
  <section class="container mt-4">
@@ -27,22 +26,22 @@ $email = "";
 
             <form id="form1" name="form1" method="post" action="<?= $baseUrl ?>/usuario/atualizar">
                <div class="form-floating mb-3">
-                  <input type="text" name="nome" id="nome" class="form-control" value="<?= $nome?>" >
+                  <input type="text" name="nome" id="nome" class="form-control"  >
                   <label for="nome">Nome:</label>
                </div>
                <div class="form-floating mb-3">
-                  <input type="usuario" name="usuario" id="usuario" class="form-control" value="<?=$usuario?>">
+                  <input type="usuario" name="usuario" id="usuario" class="form-control" >
                   <label for="usuario">Usuário:</label>
                </div>
                <div class="form-floating mb-3">
-                  <input type="password" name="senha" id="senha" class="form-control" value="<?=$senha?>">
+                  <input type="password" name="senha" id="senha" class="form-control">
                   <label for="senha">Senha:</label>
                </div>
               
                
                <button type="submit" id="btnAcessar" name="btnAcessar" class="w-100 btn btn-lg btn-primary">Criar</button>
-               <input type="hidden" name="acao" value="<?= $acao ?>">
-                <input type="hidden" name="usuario" value="<?= $usuario?>">
+               <input type="hidden" name="acao" value="<?= $acao?>">
+                <input type="hidden" name="idUsuario" value="<?= $idUsuario?>">
             </form>
 
          </div>

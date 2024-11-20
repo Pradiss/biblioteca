@@ -29,6 +29,7 @@ switch($controlador){
         require "controllers/AutorController.php";
         $controller = new AutorController();
         break;
+    
     case "sair":
         require "controllers/SairController.php";
         $controller = new SairController();

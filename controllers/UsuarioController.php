@@ -30,7 +30,7 @@ class UsuarioController{
     public function editar($idUsuario){
         $user = $this->usuarioModel->getById($idUsuario);
 
-        $idUsuario = $user["idUsuario"];
+        
         $nome = $user["nome"];
         $endereco = $user["endereco"];
         $bairro = $user["bairro"];
@@ -39,7 +39,7 @@ class UsuarioController{
         $cep = $user["cep"];
         $email = $user["email"];
         $telefone = $user["telefone"];
-        $senha = $user["senha"];
+        
 
 
         $baseUrl = $this->url;
@@ -49,7 +49,7 @@ class UsuarioController{
     }
 
     public function atualizar(){
-        $idUsuario = $_POST["idUsuario"];
+        $usuario = $_POST["usuario"];
         $nome = $_POST["nome"];
         $endereco = $_POST["endereco"];
         $bairro = $_POST["bairro"];
@@ -64,9 +64,9 @@ class UsuarioController{
 
         if($acao == "editar"){
             $idUsuario  = $_POST["idUsuario"];
-            $this->usuarioModel->update($senha, $idUsuario, $senha , $email);
+            $this->usuarioModel->update($idUsuario,$nome, $usuario, $senha , $email);
         }else{
-            $this->usuarioModel->insert($senha, $idUsuario, $senha , $email);
+            $this->usuarioModel->insert($nome, $usuario, $senha , $email);
         }
         header("location: ". $this->url . "/usuario");
     }

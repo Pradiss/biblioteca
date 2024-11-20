@@ -41,8 +41,8 @@
             </div>
 
             <div>
-              <p class="mb-0">Não tem uma conta? <a href="[[base-url]]/usuario/criar" class="text-dark-50 fw-bold">Cadastre-se Aqui</a>
-              </p>
+              <p class="mb-0">Não tem uma conta? </p>
+              <a href="<?=$baseUrl?>/usuario/criar" class="text-dark-50 fw-bold">Cadastre-se Aqui</a>
             </div>
 
           </div>
